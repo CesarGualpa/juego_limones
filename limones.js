@@ -19,6 +19,7 @@ let intervalo;
 
 
 function iniciar(){
+    clearInterval(intervalo);
     intervalo = setInterval(bajarLimon,velocidadCaida);
     dibujarSuelo();
     dibujarPersonaje();
@@ -117,4 +118,23 @@ function aparecerLimon(){
     limonX=generarAleatorio(0,canvas.width-ANCHO_LIMON);
     limonY=0;
     actualizarPantalla();
+}
+
+function reiniciar(){
+    clearInterval(intervalo);
+
+    vidas = 3;
+    puntaje = 0;
+    velocidadCaida = 200;
+
+    personajeX = canvas.width/2;
+    personajeY = canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE);
+
+    limonX = canvas.width/2;
+    limonY = 0;
+
+    mostrarEnSpan("txtPuntaje",puntaje);
+    mostrarEnSpan("txtVidas",vidas);
+
+    iniciar();
 }
