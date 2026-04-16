@@ -4,30 +4,36 @@
   <title>Juego Limones</title>
   <link rel="stylesheet" href="limones.css"/>
   <script src="utils.js"></script>
-
- 
 </head>
 <body onload="iniciar()">
   <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones sal corriendo que eso no es normal.. </p>
-    <h2>Autor: Cesar Amaguaña</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
+    <div class="tarjeta">
+      <h1>Atrapar Limones</h1>
+      <p class="subtitulo">Si del cielo te caen limones sal corriendo que eso no es normal..</p>
+      <h2>Autor: Cesar Amaguaña</h2>
 
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vida: <span id="txtVidas">3</span></p>
-    </div>
+      <canvas id="areaJuego" width="600" height="400"></canvas>
 
-    <div class="botones">
-      <button onclick="moverIzquierda();">Izquierda</button>
-      <button onclick="moverDerecha();">Derecha</button>
-      <button onclick="bajarLimon();">Bajar limon</button>
-      <button onclick="reiniciar();">Reiniciar</button>
+      <div class="panel">
+        <div class="dato">
+          <span class="etiqueta">Puntaje</span>
+          <span id="txtPuntaje">0</span>
+        </div>
+        <div class="dato">
+          <span class="etiqueta">Vida</span>
+          <span id="txtVidas">3</span>
+        </div>
+      </div>
+
+      <div class="botones">
+        <button onclick="moverIzquierda();">Izquierda</button>
+        <button onclick="moverDerecha();">Derecha</button>
+        <button onclick="bajarLimon();">Bajar limon</button>
+        <button onclick="reiniciar();">Reiniciar</button>
+      </div>
     </div>
   </div>
 
   <script src="limones.js"></script>
-
 </body>
 </html>
