@@ -20,8 +20,6 @@ let intervalo;
 
 function iniciar(){
     intervalo = setInterval(bajarLimon,velocidadCaida);
-    clearInterval(intervalo);
-    intervalo = setInterval(bajarLimon,velocidadCaida);
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -110,6 +108,7 @@ function detectarPiso(){
     mostrarEnSpan("txtVidas",vidas);
     if(vidas<=0){
     alert("GAME OVER");
+    clearInterval(intervalo);
         }
     }
 }
