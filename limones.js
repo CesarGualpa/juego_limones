@@ -37,14 +37,14 @@ function dibujarPersonaje(){
 }
 
 function moverIzquierda(){
-    personajeX = personajeX+10;
+    personajeX = personajeX-10;
     actualizarPantalla();
     detectarAtrapado();
 }
 
 //Colocar mover derecha
 function moverDerecha(){
-    personajeX = personajeX-10;
+    personajeX = personajeX+10;
     actualizarPantalla();
     detectarAtrapado();
 }
